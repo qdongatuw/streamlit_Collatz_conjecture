@@ -25,6 +25,7 @@ ini_numer = st.sidebar. number_input('Input a number:', value=2048)
 
 if ini_numer < 0.5:
     st.error('Please input a positive integer!')
+    break
 try:
     l = generate_list(round(ini_numer))
 except:
