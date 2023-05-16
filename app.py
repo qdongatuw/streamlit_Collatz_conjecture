@@ -6,29 +6,37 @@ def calculation(x):
         return x/2
     return x * 3 + 1
 
+def cacalculation_neg(x):
+    if x % 2 == 0:
+        return x/2
+    return x * 3 - 1
+
 def generate_list(n):
     l = []
     l.append(n)
-    if n == 1:
+    if abs(n)== 1:
         return l
-    while True:
-        last = calculation(l[-1])
-        l.append(last)
-        if last == 1:
-            break
-    return l
+    if n >= 0:
+        while True:
+            last = calculation(l[-1])
+            l.append(last)
+            if last == 1:
+                return l
+    else:
+        while True:
+            last = cacalculation_neg(l[-1])
+            l.append(last)
+            if last == -1:
+                return l
+    
+    
 
-st.sidebar.write('Hi Mason!')
-st.write('<h1 style="font-size: 24px; font-family: Arial;">Collatz conjecture</h1>', unsafe_allow_html=True)
+st.sidebar.header('Hi Mason!')
+st.title('Collatz conjecture')
 
 ini_numer = st.sidebar.number_input('Input a number:', value=2048)
-if ini_numer <0:
-    ini_numer = -ini_numer
 
-try:
-    l = generate_list(round(ini_numer))
-except:
-    pass
+l = generate_list(round(ini_numer))
 
 st.write(f'{ini_numer}: {len(l)} steps.')
 
