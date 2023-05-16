@@ -31,4 +31,4 @@ except:
 st.write(f'{ini_numer}: {len(l)} steps.')
 
 st.line_chart(l)
-st.dataframe(l)
+st.dataframe(l, width=600)
