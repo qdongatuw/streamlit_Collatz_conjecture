@@ -21,8 +21,7 @@ def generate_list(n):
 st.sidebar.write('Hi Mason!')
 st.write('<h1 style="font-size: 24px; font-family: Arial;">Collatz conjecture</h1>', unsafe_allow_html=True)
 
-num_list = list(range(1, 1000))
-ini_numer = st.sidebar.text_input('Input a number:', num_list)
+st.sidebar.text_input('Input a number:', ini_numer)
 
 l = generate_list(int(ini_numer))
 
