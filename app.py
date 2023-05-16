@@ -23,9 +23,7 @@ st.write('<h1 style="font-size: 24px; font-family: Arial;">Collatz conjecture</h
 
 ini_numer = st.sidebar. number_input('Input a number:', value=2048)
 
-if ini_numer < 0.5:
-    st.error('Please input a positive integer!')
-    break
+
 try:
     l = generate_list(round(ini_numer))
 except:
