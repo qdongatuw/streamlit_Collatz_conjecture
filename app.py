@@ -21,7 +21,7 @@ def generate_list(n):
 st.sidebar.write('Hi Mason!')
 st.write('<h1 style="font-size: 24px; font-family: Arial;">Collatz conjecture</h1>', unsafe_allow_html=True)
 
-num_list = list(range(1, 10000))
+num_list = list(range(1, 1000))
 ini_numer = st.sidebar.selectbox('Select a number:', num_list)
 
 l = generate_list(ini_numer)
@@ -29,4 +29,3 @@ l = generate_list(ini_numer)
 st.write(f'{ini_numer}: {len(l)} steps.')
 
 st.line_chart(l)
-st.write(l)
