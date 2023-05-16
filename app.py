@@ -29,3 +29,4 @@ l = generate_list(ini_numer)
 st.write(f'{ini_numer}: {len(l)} steps.')
 
 st.line_chart(l)
+st.write(l)
