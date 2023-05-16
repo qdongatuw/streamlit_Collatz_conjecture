@@ -21,10 +21,10 @@ def generate_list(n):
 st.sidebar.write('Hi Mason!')
 st.write('<h1 style="font-size: 24px; font-family: Arial;">Collatz conjecture</h1>', unsafe_allow_html=True)
 
-ini_numer = st.sidebar.text_input('Input a number:', value=2048)
+ini_numer = st.sidebar. number_input('Input a number:', value=2048)
 
 try:
-    l = generate_list(int(ini_numer))
+    l = generate_list(round(ini_numer))
 except:
     pass
 
