@@ -35,7 +35,9 @@ st.sidebar.header('Hi Mason!')
 st.title('Collatz conjecture')
 
 ini_numer = st.sidebar.number_input('Input a number:', value=2048)
-
+if abs(ini_numer) > 1000000000000:
+    st.info('The number is just too big.')
+    st.stop()
 l = generate_list(round(ini_numer))
 
 st.write(f'{ini_numer}: {len(l)} steps.')
