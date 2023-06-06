@@ -30,7 +30,7 @@ def generate_list(n):
                 return l
     
 
-st.title("Collatz conjecture")
+st.set_page_config(page_title="Collatz conjecture")
 
 
 st.sidebar.header('Hi Mason!')
