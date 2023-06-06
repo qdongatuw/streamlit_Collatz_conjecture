@@ -29,7 +29,9 @@ def generate_list(n):
             if last == -1:
                 return l
     
-    
+
+st.title("Collatz conjecture")
+
 
 st.sidebar.header('Hi Mason!')
 st.title('Collatz conjecture')
